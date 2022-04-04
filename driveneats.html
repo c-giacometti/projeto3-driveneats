@@ -14,35 +14,38 @@
   <body>
     <div class="top">
         <div>
-            <h2 class="titulo" style="font-size: 44px;">DrivenEats</h2>
-            <h3 style="font-size: 18px;">Sua comida em 6 minutos</h3>
+            <h2 class="titulo driven">DrivenEats</h2>
+            <h3 class="subtitulo">Sua comida em 6 minutos</h3>
         </div>
     </div>
-    <div class="secao" style="margin-top: 92px;">
-        <h3 class="titulo" style="font-size: 26px;">Primeiro, seu prato</h3>
+    <div class="secao1">
+        <h3 class="titulo">Primeiro, seu prato</h3>
     </div>
     <div class="pratos">
-        <div class="opcao">
+        <div class="opcao um" onclick="verde('um')">
             <img src="Imagens/Combinado.png"/>
             <h4>Combinado 30 pçs</h4>
             <h5>Salmão faz bem pra pele</h5>
             <h6>R$ 67,00</h6>
+            <ion-icon name="checkmark-circle"></ion-icon>
         </div>
-        <div class="opcao">
+        <div class="opcao dois" onclick="verde('dois')">
             <img src="Imagens/Temaki.png"/>
             <h4>Temaki Salmão</h4>
             <h5>Come mais salmão bem</h5>
             <h6>R$ 22,00</h6>
+            <ion-icon name="checkmark-circle"></ion-icon>
         </div>
-        <div class="opcao">
+        <div class="opcao tres" onclick="verde('tres')">
             <img src="Imagens/Hot Roll.jpg"/>
             <h4>Hot Roll Salmão</h4>
             <h5>Um pouco de fritura, um pouco de salmão</h5>
             <h6>R$ 27,00</h6>
+            <ion-icon name="checkmark-circle"></ion-icon>
         </div>
     </div>
-    <div class="secao">
-        <h3 class="titulo" style="font-size: 26px">Agora, sua bebida</h3>
+    <div class="secao2">
+        <h3 class="titulo">Agora, sua bebida</h3>
     </div>
     <div class="pratos">
         <div class="opcao">
@@ -64,8 +67,8 @@
             <h6>R$ 6,00</h6>
         </div>
     </div>
-    <div class="secao">
-        <h3 class="titulo" style="font-size: 26px">Por fim, sua sobremesa</h3>
+    <div class="secao3">
+        <h3 class="titulo">Por fim, sua sobremesa</h3>
     </div>
     <div class="pratos" style="margin-bottom: 110px;">
         <div class="opcao">
@@ -88,7 +91,11 @@
         </div>
     </div>
     <div class="bottom">
-        <div class="botao"><h4>Selecione os 3 itens para fechar o pedido</h4></div>
+        <div class="botao" onclick="fecharPedido()"><h4>Selecione os 3 itens para fechar o pedido</h4></div>
     </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
   </body>
 </html>

@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
-} 
-
+}
 body {
+    width: 414px;
     background-color: #E5E5E5;
     font-family: roboto;
 }
@@ -22,24 +22,46 @@ body {
     top: 0px;
     left: 0px;
     box-shadow: 0px 4px 4px rgba(0,0,0, 0.25);
+    z-index: 1;
 }
 
 .top div {
     color: white;
 }
 
-.secao {
-    height: 75px;
-    display: flex;
+.driven {
+    font-size: 44px;
 }
 
-.secao h3 {
+.subtitulo {
+    font-size: 18px;
+}
+
+.secao1 {
+    height: 45px;
+    display: flex;
+    margin: 122px 0px 0px 16px;
+    font-size: 26px;
+}
+
+.secao2 {
+    height: 45px;
+    display: flex;
+    font-size: 26px;
+    margin: 30px 0px 0px 16px;
+}
+
+.secao3 {
+    height: 45px;
+    display: flex;
+    font-size: 26px;
     margin: 30px 0px 0px 16px;
 }
 
 .pratos {
     display: flex;
     align-items: center;
+    overflow-x: scroll;
 }
 
 .opcao {
@@ -53,6 +75,17 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px -4px rgba(0,0,0, 0.25);
+    cursor: pointer;
+    position: relative;
+}
+
+ion-icon {
+    position: absolute;
+    font-size: 20px;
+    color: rgb(8, 198, 8);
+    right: 10px;
+    bottom: 10px;
+    display: none;
 }
 
 .opcao img {
@@ -77,6 +110,15 @@ body {
     font-size: 16px;
 }
 
+.hide {
+    border: 5px solid rgb(8, 198, 8);
+    padding: 10px;
+}
+
+.hide ion-icon {
+    display: flex;
+}
+
 .bottom {
     height: 92px;
     width: 100%;
@@ -87,13 +129,14 @@ body {
     position: fixed;
     bottom: 0px;
     left: 0px;
+    z-index: 1;
 }
 
 .botao {
     height: 60px;
     width: 364px;
     background-color: #cbcbcb;
-    border-radius: 12px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,6 +149,14 @@ body {
     text-align: center;
 }
 
+.ativar {
+    background-color:  rgb(8, 198, 8);
+    cursor: pointer;
+}
+
+.ativar h4 {
+    font-weight: 700;
+}
 
 
 

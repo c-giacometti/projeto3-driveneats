@@ -11,16 +11,59 @@ function fecharPedido () {
 function verde(opcaosel) {
     i = 1;
 
-    let selecionado = document.querySelector(".hide");
+    let selecionado = document.querySelector(".salgados > .hide");
 
     if(selecionado !== null){
         selecionado.classList.remove("hide");
     }
     
     let selecionar = document.querySelector("." + opcaosel)
-    selecionar.classList.toggle("hide");
+    selecionar.classList.add("hide");
 
     fecharPedido()
 }
 
+function verdeSalgados(opcaosel) {
+    i = 1;
 
+    let selecionado = document.querySelector(".salgados > .hide");
+
+    if(selecionado !== null){
+        selecionado.classList.remove("hide");
+    }
+    
+    let selecionar = document.querySelector("." + opcaosel)
+    selecionar.classList.add("hide");
+
+    fecharPedido()
+}
+
+function verdeBebidas(opcaosel) {
+    j = 1;
+
+    let selecionado = document.querySelector(".bebidas > .hide");
+
+    if(selecionado !== null){
+        selecionado.classList.remove("hide");
+    }
+    
+    let selecionar = document.querySelector("." + opcaosel)
+    selecionar.classList.add("hide");
+
+    fecharPedido()
+}
+
+function verdeDoces(opcaosel) {
+    k = 1;
+
+    let selecionado = document.querySelector(".doces > .hide");
+
+    if(selecionado !== null){
+        selecionado.classList.remove("hide");
+    }
+    
+    let selecionar = document.querySelector("." + opcaosel)
+    selecionar.classList.add("hide");
+
+    fecharPedido()
+}

@@ -82,7 +82,7 @@ function confirmar () {
     document.querySelector(".bebida > h6").innerHTML = preçoBebida.toFixed(2);
     document.querySelector(".sobremesa > h5").innerHTML = sobremesa;
     document.querySelector(".sobremesa > h6").innerHTML = preçoSobremesa.toFixed(2);
-    document.querySelector(".total > h6").innerHTML = preçoFinal.toFixed(2);
+    document.querySelector(".total > h6").innerHTML = "R$ " + preçoFinal.toFixed(2);
 }
 
 function finalizar () {

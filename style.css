@@ -195,6 +195,10 @@ ion-icon {
     margin-bottom: 15px;
 }
 
+.total {
+    font-weight: 700;
+}
+
 .pedir {
     width: 330px;
     height: 52px;
@@ -215,6 +219,7 @@ ion-icon {
 .aparecer {
     display: flex;
 }
+
 
 
 

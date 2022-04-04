@@ -1,4 +1,5 @@
 let i, j, k = 0;
+let preçoPrato, preçoBebida, preçoSobremesa = 0;
 
 function fecharPedido () {
     if (i+j+k === 3) {
@@ -19,14 +20,15 @@ function verdeSalgados(opcaosel) {
     
     opcaosel.classList.add("hide");
 
-    let prato = opcaosel.querySelector("h4").innerHTML;
-    let preçoSalgado = opcaosel.querySelector("span").innerHTML;
+    prato = opcaosel.querySelector("h4").innerHTML;
+    preçoPrato = opcaosel.querySelector("span").innerHTML;
 
-    preçoSalgado = Number(preçoSalgado).toFixed(2);
+    preçoPrato = Number(preçoPrato);
 
     fecharPedido()
 
-    console.log(prato, preçoSalgado);
+    console.log(prato, preçoPrato);
+
 }
 
 function verdeBebidas(opcaosel) {
@@ -40,10 +42,10 @@ function verdeBebidas(opcaosel) {
     
     opcaosel.classList.add("hide");
 
-    let bebida = opcaosel.querySelector("h4").innerHTML;
-    let preçoBebida = opcaosel.querySelector("span").innerHTML;
+    bebida = opcaosel.querySelector("h4").innerHTML;
+    preçoBebida = opcaosel.querySelector("span").innerHTML;
 
-    preçoBebida = Number(preçoBebida).toFixed(2);
+    preçoBebida = Number(preçoBebida);
 
     fecharPedido()
 
@@ -62,13 +64,30 @@ function verdeDoces(opcaosel) {
     
     opcaosel.classList.add("hide");
 
-    let sobremesa = opcaosel.querySelector("h4").innerHTML;
-    let preçoSobremesa = opcaosel.querySelector("span").innerHTML;
+    sobremesa = opcaosel.querySelector("h4").innerHTML;
+    preçoSobremesa = opcaosel.querySelector("span").innerHTML;
 
-    preçoSobremesa = Number(preçoSobremesa).toFixed(2);
+    preçoSobremesa = Number(preçoSobremesa);
 
     fecharPedido()
 
     console.log(sobremesa, preçoSobremesa);
 
+}
+
+function finalizar () {
+    let preçoFinal = preçoPrato + preçoBebida + preçoSobremesa;
+    preçoFinal = preçoFinal.toFixed(2);
+
+    let strMsg = `Olá, gostaria de fazer o pedido:
+    - Prato: ${prato}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: R$ ${preçoFinal}`
+
+    strMsg = encodeURIComponent(strMsg);
+
+    window.open("https://wa.me/55016982142755?text="+strMsg);
+
+    console.log(strMsg);
 }

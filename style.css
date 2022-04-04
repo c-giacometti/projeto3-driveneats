@@ -71,7 +71,7 @@ body {
     height: 216px;
     width: 172px;
     background-color: #FFFFFF;
-    margin-left: 16px;
+    margin: 0px 0px 20px 16px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px -4px rgba(0,0,0, 0.25);
@@ -108,6 +108,10 @@ ion-icon {
 
 .opcao h6 {
     font-size: 16px;
+}
+
+.doces {
+    margin-bottom: 110px;
 }
 
 .hide {

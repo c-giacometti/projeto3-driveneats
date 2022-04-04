@@ -8,21 +8,6 @@ function fecharPedido () {
     }
 }
 
-function verde(opcaosel) {
-    i = 1;
-
-    let selecionado = document.querySelector(".salgados > .hide");
-
-    if(selecionado !== null){
-        selecionado.classList.remove("hide");
-    }
-    
-    let selecionar = document.querySelector("." + opcaosel)
-    selecionar.classList.add("hide");
-
-    fecharPedido()
-}
-
 function verdeSalgados(opcaosel) {
     i = 1;
 
@@ -32,10 +17,16 @@ function verdeSalgados(opcaosel) {
         selecionado.classList.remove("hide");
     }
     
-    let selecionar = document.querySelector("." + opcaosel)
-    selecionar.classList.add("hide");
+    opcaosel.classList.add("hide");
+
+    let prato = opcaosel.querySelector("h4").innerHTML;
+    let preçoSalgado = opcaosel.querySelector("span").innerHTML;
+
+    preçoSalgado = Number(preçoSalgado).toFixed(2);
 
     fecharPedido()
+
+    console.log(prato, preçoSalgado);
 }
 
 function verdeBebidas(opcaosel) {
@@ -47,10 +38,17 @@ function verdeBebidas(opcaosel) {
         selecionado.classList.remove("hide");
     }
     
-    let selecionar = document.querySelector("." + opcaosel)
-    selecionar.classList.add("hide");
+    opcaosel.classList.add("hide");
+
+    let bebida = opcaosel.querySelector("h4").innerHTML;
+    let preçoBebida = opcaosel.querySelector("span").innerHTML;
+
+    preçoBebida = Number(preçoBebida).toFixed(2);
 
     fecharPedido()
+
+    console.log(bebida, preçoBebida);
+
 }
 
 function verdeDoces(opcaosel) {
@@ -62,8 +60,15 @@ function verdeDoces(opcaosel) {
         selecionado.classList.remove("hide");
     }
     
-    let selecionar = document.querySelector("." + opcaosel)
-    selecionar.classList.add("hide");
+    opcaosel.classList.add("hide");
+
+    let sobremesa = opcaosel.querySelector("h4").innerHTML;
+    let preçoSobremesa = opcaosel.querySelector("span").innerHTML;
+
+    preçoSobremesa = Number(preçoSobremesa).toFixed(2);
 
     fecharPedido()
+
+    console.log(sobremesa, preçoSobremesa);
+
 }

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
   <body>
-    <div class="top">
+    <div class="driveneats"><div class="top">
         <div>
             <h2 class="titulo driven">DrivenEats</h2>
             <h3 class="subtitulo">Sua comida em 6 minutos</h3>
@@ -97,8 +97,30 @@
         </div>
     </div>
     <div class="bottom">
-        <div class="botao" onclick="finalizar()"><h4>Selecione os 3 itens para fechar o pedido</h4></div>
+        <div class="botao" onclick="confirmar()"><h4>Selecione os 3 itens para fechar o pedido</h4></div>
     </div>
+</div>
+    <div class="confirma">
+        <div class="aviso">Confirme seu pedido</div>
+        <div class="item prato">
+            <h5></h5>
+            <h6></h6>
+        </div>
+        <div class="item bebida">
+            <h5></h5>
+            <h6></h6>
+        </div>
+        <div class="item sobremesa">
+            <h5></h5>
+            <h6></h6>
+        </div>
+        <div class="item total">
+            <h5>TOTAL</h5>
+            <h6></h6>
+        </div>
+        <div class="pedir" onclick="finalizar()"><span>Tudo certo, pode pedir!</span></div>
+        <div class="cancelar" onclick="cancelar()"><span>Cancelar</span></div>
+    </div>    
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

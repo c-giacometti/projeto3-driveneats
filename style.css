@@ -6,6 +6,7 @@ body {
     width: 414px;
     background-color: #E5E5E5;
     font-family: roboto;
+    position:relative;
 }
 
 .titulo {
@@ -161,6 +162,58 @@ ion-icon {
 
 .ativar h4 {
     font-weight: 700;
+}
+
+.confirma {
+    width: 377px;
+    height: 353px;
+    border-radius: 12px;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0, 0.25);
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px;
+}
+
+.aviso {
+    font-weight: 700;
+    margin: 20px 0px 30px 0px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.pedir {
+    width: 330px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #50D074;
+    font-weight: 700;
+    margin: 20px 0px 15px 0px;
+}
+
+.fade {
+    opacity: 0.1;
+}
+
+.aparecer {
+    display: flex;
 }
 
 

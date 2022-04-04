@@ -1,5 +1,5 @@
 let i, j, k = 0;
-let preçoPrato, preçoBebida, preçoSobremesa = 0;
+let preçoFinal, preçoPrato, preçoBebida, preçoSobremesa = 0;
 
 function fecharPedido () {
     if (i+j+k === 3) {
@@ -27,8 +27,6 @@ function verdeSalgados(opcaosel) {
 
     fecharPedido()
 
-    console.log(prato, preçoPrato);
-
 }
 
 function verdeBebidas(opcaosel) {
@@ -48,8 +46,6 @@ function verdeBebidas(opcaosel) {
     preçoBebida = Number(preçoBebida);
 
     fecharPedido()
-
-    console.log(bebida, preçoBebida);
 
 }
 
@@ -71,23 +67,48 @@ function verdeDoces(opcaosel) {
 
     fecharPedido()
 
-    console.log(sobremesa, preçoSobremesa);
+}
 
+function confirmar () {
+
+    let preçoFinal = preçoPrato + preçoBebida + preçoSobremesa;
+
+    document.querySelector(".driveneats").classList.add("fade");
+    document.querySelector(".confirma").classList.add("aparecer");
+
+    document.querySelector(".prato > h5").innerHTML = prato;
+    document.querySelector(".prato > h6").innerHTML = preçoPrato.toFixed(2);
+    document.querySelector(".bebida > h5").innerHTML = bebida;
+    document.querySelector(".bebida > h6").innerHTML = preçoBebida.toFixed(2);
+    document.querySelector(".sobremesa > h5").innerHTML = sobremesa;
+    document.querySelector(".sobremesa > h6").innerHTML = preçoSobremesa.toFixed(2);
+    document.querySelector(".total > h6").innerHTML = preçoFinal.toFixed(2);
 }
 
 function finalizar () {
-    let preçoFinal = preçoPrato + preçoBebida + preçoSobremesa;
+
+    let nome = prompt("Qual o seu nome?");
+    let endereço = prompt("Qual o seu endereço? (Rua e número)");
+
+    preçoFinal = preçoPrato + preçoBebida + preçoSobremesa;
     preçoFinal = preçoFinal.toFixed(2);
 
     let strMsg = `Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
-    Total: R$ ${preçoFinal}`
+    Total: R$ ${preçoFinal}
+    
+    nome: ${nome}
+    endereço: ${endereço}`
 
     strMsg = encodeURIComponent(strMsg);
 
     window.open("https://wa.me/55019991003787?text="+strMsg);
 
-    console.log(strMsg);
+}
+
+function cancelar () {
+    document.querySelector(".aparecer").classList.remove("aparecer");
+    document.querySelector(".fade").classList.remove("fade");
 }

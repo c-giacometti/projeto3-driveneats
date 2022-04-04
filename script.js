@@ -87,7 +87,7 @@ function finalizar () {
 
     strMsg = encodeURIComponent(strMsg);
 
-    window.open("https://wa.me/55016982142755?text="+strMsg);
+    window.open("https://wa.me/55019991003787?text="+strMsg);
 
     console.log(strMsg);
 }
